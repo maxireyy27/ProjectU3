@@ -17,7 +17,13 @@
             <li><a href="contacto.html">Contacto</a></li>
         </ul>
     </nav>
-
+  <!-- Header con efecto parallax -->
+  <header class="parallax2">
+    <div class="header-content">
+        <h1>Contactanos putito</h1>
+        <p>Descubres nuestros maravillosos descuentos.</p>
+    </div>
+</header>
     <!-- Publicidad -->
     <div class="ads left">
         <img src="ad1.jpg">
@@ -29,27 +35,38 @@
     </div>
 
     <!-- Contenido -->
+    <div class="contact-form">
+        <h2>Formulario de Contacto</h2>
+        <form action="submit_form.php" method="post">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+            </div>
+            <div class="form-group">
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+            <div class="form-group">
+                <button type="button">Enviar</button>
+            </div>
+        </form>
+    </div>
+    
     <div class="content">
-        <h1>Contacto</h1>
-        <p>Formulario de contacto e información adicional.</p>
-        <table>
-            <tr>
-                <th>Contacto</th>
-                <th>Descripción</th>
-            </tr>
-            <tr>
-                <td>Teléfono</td>
-                <td>+123456789</td>
-            </tr>
-            <tr>
-                <td>Email</td>
-                <td>info@example.com</td>
-            </tr>
-        </table>
-        <h2>Video de Contacto</h2>
+        
+       
+        <h2>Video de Introducción</h2>
         <video controls>
             <source src="video.mp4" type="video/mp4">
-            Tu navegador no soporta la reproducción de videos.
+
         </video>
     </div>
 

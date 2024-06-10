@@ -20,38 +20,95 @@
 
     <!-- Publicidad -->
     <div class="ads left">
-        <img src="ad1.jpg">
-        <img src="ad2.jpg">
+        <img src="img/ad1.jpg">
+        <img src="img/ad2.jpg">
     </div>
     <div class="ads right">
-        <img src="ad3.jpg">
-        <img src="ad4.jpg">
+        <img src="img/ad3.jpg">
+        <img src="img/ad4.jpg">
     </div>
 
-    <!-- Contenido -->
-    <div class="content">
-        <h1>Nuestros Servicios</h1>
-        <p>Descripción de los servicios que ofrecemos.</p>
+    <!-- Header con Parallax -->
+    <header class="parallax">
+        <div class="header-content">
+            <h1>Nuestros Servicios</h1>
+            <p>Conozca lo que podemos ofrecerle</p>
+        </div>
+    </header>
+
+    <!-- Sección de Servicios -->
+    <section class="services">
+        <h2>Servicios Destacados</h2>
+        <div class="services-cards">
+            <div class="card">
+                <img src="/img/1.jpg" alt="Servicio 1">
+                <div class="card-content">
+                    <h3>Servicio A</h3>
+                    <p>Descripción del Servicio A. Este servicio incluye...</p>
+                    <button>Más Información</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="/img/2.jpg" alt="Servicio 2">
+                <div class="card-content">
+                    <h3>Servicio B</h3>
+                    <p>Descripción del Servicio B. Este servicio es ideal para...</p>
+                    <button>Más Información</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="/img/3.jpg" alt="Servicio 3">
+                <div class="card-content">
+                    <h3>Servicio C</h3>
+                    <p>Descripción del Servicio C. Con este servicio podrás...</p>
+                    <button>Más Información</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabla de Precios -->
+    <section class="pricing">
+        <h2>Tabla de Precios</h2>
         <table>
-            <tr>
-                <th>Servicio</th>
-                <th>Descripción</th>
-            </tr>
-            <tr>
-                <td>Servicio A</td>
-                <td>Descripción del Servicio A</td>
-            </tr>
-            <tr>
-                <td>Servicio B</td>
-                <td>Descripción del Servicio B</td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Servicio</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Servicio A</td>
+                    <td>Descripción detallada del Servicio A.</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Servicio B</td>
+                    <td>Descripción detallada del Servicio B.</td>
+                    <td>$200</td>
+                </tr>
+                <tr>
+                    <td>Servicio C</td>
+                    <td>Descripción detallada del Servicio C.</td>
+                    <td>$300</td>
+                </tr>
+            </tbody>
         </table>
+    </section>
+
+    <!-- Video -->
+    <section class="video-section">
         <h2>Video de Nuestros Servicios</h2>
         <video controls>
             <source src="video.mp4" type="video/mp4">
             Tu navegador no soporta la reproducción de videos.
         </video>
-    </div>
+    </section>
+
+
+    
 
     <script src="scripts.js"></script>
 </body>
