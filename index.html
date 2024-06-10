@@ -4,42 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <!-- Menú Principal -->
     <nav>
         <ul class="menu">
-            <li><a href="index.html">Inicio GERARDO PUTA</a></li>
-            <li><a href="nosotros.html">Sobre Nosotros maxx reputa</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Sobre Nosotros</a></li>
             <li><a href="servicios.html">Servicios</a></li>
             <li><a href="contacto.html">Contacto</a></li>
         </ul>
     </nav>
 
     <!-- Carrusel de Imágenes -->
-    <div class="carousel">
-        <img src="imagen1.jpg" class="active">
-        <img src="imagen2.jpg">
-        <img src="imagen3.jpg">
-        <button class="prev">Prev</button>
-        <button class="next">Next</button>
+    <div class="imagenes">
+        <input type="radio" id="img1" name="imagen" checked>
+        <input type="radio" id="img2" name="imagen">
+        <input type="radio" id="img3" name="imagen">
+
+        <div class="imagenes-inner">
+            <div class="imagenes-item">
+                <img src="img/1.jpg" alt="Imagen 1">
+                <label for="img3" class="prev">&lsaquo;</label>
+                <label for="img2" class="next">&rsaquo;</label>
+            </div>
+            <div class="imagenes-item">
+                <img src="img/2.jpg" alt="Imagen 2">
+                <label for="img1" class="prev">&lsaquo;</label>
+                <label for="img3" class="next">&rsaquo;</label>
+            </div>
+            <div class="imagenes-item">
+                <img src="img/3.jpg" alt="Imagen 3">
+                <label for="img2" class="prev">&lsaquo;</label>
+                <label for="img1" class="next">&rsaquo;</label>
+            </div>
+        </div>
     </div>
 
     <!-- Publicidad -->
     <div class="ads left">
-        <img src="ad1.jpg">
-        <img src="ad2.jpg">
+        <img src="img/1.jpg">
+        <img src="img/2.jpg">
     </div>
     <div class="ads right">
-        <img src="ad3.jpg">
-        <img src="ad4.jpg">
+        <img src="img/3.jpg">
     </div>
 
     <!-- Contenido -->
     <div class="content">
-        <h1>Bienvenido a Nuestra Página Principal</h1>
-        <table>
+        <h1 class="content_h1">Bienvenido a nuestra página principal</h1>
+        <table class="tabla">
             <tr>
                 <th>Elemento</th>
                 <th>Descripción</th>
@@ -56,10 +73,10 @@
         <h2>Video de Introducción</h2>
         <video controls>
             <source src="video.mp4" type="video/mp4">
-            Tu navegador no soporta la reproducción de videos.
+
         </video>
     </div>
 
-    <script src="scripts.js"></script>
+
 </body>
 </html>

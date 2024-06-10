@@ -1,0 +1,166 @@
+:root{
+    --morado: #9C27B0;
+    --amarillo: #FFCE00;
+    --blanco: #FFF;
+    --negro: #000;
+    --azul: #00FFFF;
+    --plata: #C0C0C0;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1.6rem;
+    background-color: var(--plata);
+}
+
+nav {
+    background-color: var(--morado);
+    overflow: hidden;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+.imagenes {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.imagenes-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.imagenes-item {
+    min-width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px; /* Altura fija para el carrusel */
+}
+
+.imagenes-item img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.imagenes input {
+    display: none;
+}
+
+.imagenes input:checked + .imagenes-inner .imagenes-item {
+    display: block;
+    transform: translateX(0);
+}
+
+.imagenes input:nth-child(1):checked ~ .imagenes-inner {
+    transform: translateX(0%);
+}
+
+.imagenes input:nth-child(2):checked ~ .imagenes-inner {
+    transform: translateX(-100%);
+}
+
+.imagenes input:nth-child(3):checked ~ .imagenes-inner {
+    transform: translateX(-200%);
+}
+
+.imagenes label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.imagenes .prev {
+    left: 10px;
+}
+
+.imagenes .next {
+    right: 10px;
+}
+
+.ads {
+    position: fixed;
+    top: 0;
+    width: 100px;
+    background-color: #fff;
+}
+
+.ads.left {
+    left: 0;
+}
+
+.ads.right {
+    right: 0;
+}
+
+.ads img {
+    display: block;
+    width: 100%;
+}
+
+.content {
+    margin: 20px;
+    padding: 20px;
+    background-color:var(--primario);
+    border-radius: 5px;
+}
+
+.content_h1{
+    text-align: center;
+}
+
+.tabla{
+    background-color: var(--azul);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+video {
+    width: 100%;
+    margin-top: 20px;
+}
