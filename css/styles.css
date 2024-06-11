@@ -17,7 +17,7 @@ body {
     margin: 0;
     padding: 0;
 }
-
+/* Barra de navegar */
 nav {
     background-color: var(--morado);
     overflow: hidden;
@@ -153,10 +153,13 @@ nav ul li a:focus {
 
 .ads {
     position: fixed;
-    top: 70px; 
+    top: 100px; /* Ajustar para que los anuncios estén debajo del menú */
     width: 100px;
     background-color: #fff;
-    z-index: 2000; 
+   
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
 .ads.left {
@@ -170,19 +173,55 @@ nav ul li a:focus {
 .ads img {
     display: block;
     width: 100%;
+    margin-bottom: 10px;
 }
 
+.close-ads {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2000; 
+}
+
+
+.close-ads {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+/* Este estilo centra los titulos */
 .content {
     margin: 20px;
     padding: 20px;
-    background-color:var(--primario);
+    background-color: var(--primario);
     border-radius: 5px;
+    text-align: center; 
 }
 
-.content_h1{
+.content_h1 {
     text-align: center;
 }
-
+/* tablas */
 .tabla{
     background-color: var(--azul);
 }
@@ -200,14 +239,14 @@ th, td {
     padding: 10px;
     text-align: left;
 }
-
+/* video */
 video {
     width: 100%;
     margin-top: 20px;
 }
  
 
-
+/* formulario*/
 .contact-form {
     max-width: 600px;
     margin: 50px auto;
@@ -261,7 +300,7 @@ video {
 }
   
 
-
+/* este crea el efecto parallax en el header*/
 .parallax {
     background-image: url('/img/fondo/1.jpg'); /* Reemplazar con la URL de tu imagen */
     height: 850px;
@@ -301,7 +340,7 @@ video {
     border-radius: 10px;
 }
 
-
+/* productos y cards */
 .products {
     display: flex;
     flex-wrap: wrap;
@@ -354,6 +393,7 @@ video {
 .card-content button:hover {
     background: var(--button)
 }
+/* responsividad a cards */
 @media (max-width: 992px) {
     .card {
         width: calc(50% - 20px);
@@ -365,7 +405,7 @@ video {
         width: 100%;
     }
 }
-
+/* servicios */
 .services {
     padding: 20px;
     background: var(--background-color);
@@ -385,7 +425,6 @@ video {
     justify-content: space-between;
     gap: 20px;
 }
-
 
 /* Footer */
 footer {
@@ -434,12 +473,22 @@ footer {
 
 .footer-section .socials a {
     margin: 0 10px;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s;
 }
 
-.footer-section .socials img {
-    width: 32px;
-    height: 32px;
+.footer-section .socials svg {
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+    fill: var(--text-color);
+}
+
+.footer-section .socials a:hover svg {
+    fill: var(--hover-color);
 }
 
 .footer-bottom {
@@ -447,4 +496,154 @@ footer {
 }
 .justify{
     text-align: justify; 
+}
+
+
+
+/* tabla de precios */
+.pricing {
+    padding: 20px;
+    background: var(--background-color);
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pricing h2 {
+    color: var(--morado);
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.pricing table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.pricing th, .pricing td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    font-size: 1.6rem;
+}
+
+.pricing th {
+    background-color: var(--morado);
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
+.pricing td {
+    background-color: var(--background-color);
+    color: #333;
+}
+
+.pricing tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.pricing tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .pricing table, .pricing tbody, .pricing th, .pricing td, .pricing tr {
+        display: block;
+    }
+
+    .pricing th {
+        background-color: var(--morado);
+        color: var(--text-color);
+        padding: 10px;
+        text-align: center;
+    }
+
+    .pricing td {
+        background-color: var(--background-color);
+        padding: 10px;
+        text-align: center;
+        border: none;
+        position: relative;
+    }
+
+    .pricing td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding: 10px;
+        background-color: #f1f1f1;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .pricing td:nth-of-type(2):before {
+        background-color: #f9f9f9;
+    }
+
+    .pricing td {
+        padding-left: 50%;
+    }
+}
+
+
+/* estilos de mision, vision, etc */
+.about-content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.about-content section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: var(--background-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.about-content section img {
+    width: 30%;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.about-content section .text {
+    flex: 1;
+}
+
+.about-content h2 {
+    color: var(--morado);
+    margin-bottom: 20px;
+    font-family: 'Staatliches', sans-serif;
+    font-size: 2.4rem;
+}
+
+.about-content p {
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        padding: 0 10px;
+    }
+
+    .about-content section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content section img {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
 }
