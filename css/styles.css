@@ -337,6 +337,7 @@ video {
 
 .card-content p {
     flex-grow: 1;
+   
 }
 
 .card-content button {
@@ -444,4 +445,6 @@ footer {
 .footer-bottom {
     margin-top: 20px;
 }
-
+.justify{
+    text-align: justify; 
+}

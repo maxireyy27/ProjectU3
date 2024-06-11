@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('/font/librefranklin-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('/font/librefranklin-bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('/font/librefranklin-italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Libre Franklin', Arial, sans-serif;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-weight: normal;
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-weight: normal;
+    font-size: 1rem;
+}
