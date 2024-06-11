@@ -5,9 +5,641 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
     <title>Sobre Nosotros</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles2.css">
 </head>
 <body>
+    <style>
+        /* Barra de navegar */
+nav {
+    background-color: var(--morado);
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    display: block;
+    color: var(--text-color);
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: var(--hover-color);
+}
+
+nav ul li a:active {
+    background-color: #2575fc;
+}
+
+nav ul li a:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.5);
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+.carousel {
+    position: relative;
+    max-width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: #fff;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.carousel-item {
+    min-width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.carousel input {
+    display: none;
+}
+
+.carousel input:checked + .carousel-inner .carousel-item {
+    display: block;
+    transform: translateX(0);
+}
+
+.carousel input:nth-child(1):checked ~ .carousel-inner {
+    transform: translateX(0%);
+}
+
+.carousel input:nth-child(2):checked ~ .carousel-inner {
+    transform: translateX(-100%);
+}
+
+.carousel input:nth-child(3):checked ~ .carousel-inner {
+    transform: translateX(-200%);
+}
+
+.carousel label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #6a11cb;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 32px;
+    z-index: 1;
+    transition: background-color 0.3s;
+}
+
+.carousel label:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.carousel .prev {
+    left: 15px;
+}
+
+.carousel .next {
+    right: 15px;
+}
+
+.ads {
+    position: fixed;
+    top: 100px; /* Ajustar para que los anuncios estén debajo del menú */
+    width: 100px;
+    background-color: #fff;
+   
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.ads.left {
+    left: 0;
+}
+
+.ads.right {
+    right: 0;
+}
+
+.ads img {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.close-ads {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2000; 
+}
+
+
+.close-ads {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+/* Este estilo centra los titulos */
+.content {
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--primario);
+    border-radius: 5px;
+    text-align: center; 
+}
+
+.content_h1 {
+    text-align: center;
+}
+/* tablas */
+.tabla{
+    background-color: var(--azul);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+/* video */
+video {
+    width: 100%;
+    margin-top: 20px;
+}
+ 
+
+/* formulario*/
+.contact-form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: var(--background-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--morado);
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+    
+}
+
+.contact-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    
+
+}
+
+.contact-form .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    
+}
+
+.contact-form .form-group button {
+    width: 100%;
+    padding: 10px;
+    background: var(--button-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form .form-group button:hover {
+    background: var(--button-hover-color);
+}
+  
+
+/* este crea el efecto parallax en el header*/
+.parallax {
+    background-image: url('/img/fondo/1.jpg'); /* Reemplazar con la URL de tu imagen */
+    height: 850px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.parallax .header-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+.parallax2 {
+    background-image: url('/img/fondo/2.jpg'); /* Reemplazar con la URL de tu imagen */
+    height: 850px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.parallax2 .header-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* productos y cards */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: var(--background-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    width: calc(33.333% - 20px);
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    margin-top: 0;
+    color: var(--morado);
+}
+
+.card-content p {
+    flex-grow: 1;
+   
+}
+
+.card-content button {
+    background: var(--button-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    width: 100%;
+}
+
+.card-content button:hover {
+    background: var(--button)
+}
+/* responsividad a cards */
+@media (max-width: 992px) {
+    .card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+}
+/* servicios */
+.services {
+    padding: 20px;
+    background: var(--background-color);
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.services h2 {
+    color: var(--morado);
+    margin-bottom: 20px;
+}
+
+.services-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--morado);
+    color: var(--text-color);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1 1 300px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    margin-top: 0;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+.footer-section ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: var(--hover-color);
+}
+
+.footer-section .socials a {
+    margin: 0 10px;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.footer-section .socials svg {
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+    fill: var(--text-color);
+}
+
+.footer-section .socials a:hover svg {
+    fill: var(--hover-color);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+.justify{
+    text-align: justify; 
+}
+
+
+
+/* tabla de precios */
+.pricing {
+    padding: 20px;
+    background: var(--background-color);
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pricing h2 {
+    color: var(--morado);
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.pricing table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.pricing th, .pricing td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    font-size: 1.6rem;
+}
+
+.pricing th {
+    background-color: var(--morado);
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
+.pricing td {
+    background-color: var(--background-color);
+    color: #333;
+}
+
+.pricing tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.pricing tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .pricing table, .pricing tbody, .pricing th, .pricing td, .pricing tr {
+        display: block;
+    }
+
+    .pricing th {
+        background-color: var(--morado);
+        color: var(--text-color);
+        padding: 10px;
+        text-align: center;
+    }
+
+    .pricing td {
+        background-color: var(--background-color);
+        padding: 10px;
+        text-align: center;
+        border: none;
+        position: relative;
+    }
+
+    .pricing td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding: 10px;
+        background-color: #f1f1f1;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .pricing td:nth-of-type(2):before {
+        background-color: #f9f9f9;
+    }
+
+    .pricing td {
+        padding-left: 50%;
+    }
+}
+
+
+/* estilos de mision, vision, etc */
+.about-content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.about-content section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: var(--background-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.about-content section img {
+    width: 30%;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.about-content section .text {
+    flex: 1;
+}
+
+.about-content h2 {
+    color: var(--morado);
+    margin-bottom: 20px;
+    font-family: 'Staatliches', sans-serif;
+    font-size: 2.4rem;
+}
+
+.about-content p {
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        padding: 0 10px;
+    }
+
+    .about-content section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content section img {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+    </style>
     <!-- Menú Principal -->
     <nav>
         <ul class="menu">
@@ -143,6 +775,12 @@
             <p>&copy; 2024 GERMAX. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script>
+        function closeAds(position) {
+            var adsContainer = document.querySelector('.ads.' + position);
+            adsContainer.style.display = 'none';
+        }
+        </script>
     <script src="scripts.js"></script>
 </body>
 </html>

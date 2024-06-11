@@ -1,0 +1,19 @@
+:root {
+    --plata: #f4f4f4;
+    --morado: #6a11cb;
+    --hover-color: #575757;
+    --text-color: white;
+    --background-color: #fff;
+    --button-color: #28a745; /* Color verde para el botón */
+    --button-hover-color: #218838; /* Verde oscuro para el hover del botón */
+    --button-text-color: white; /* Color del texto del botón */
+    --button-hover-text-color: white; /* Color del texto del botón en hover */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1.6rem;
+    background-color: var(--plata);
+    margin: 0;
+    padding: 0;
+}
