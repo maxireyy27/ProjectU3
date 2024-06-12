@@ -18,7 +18,7 @@
         </ul>
     </nav>
 
-    <!-- Publicidad -->
+    <!-- Anuncions de publicidad a los lados-->
     <div class="ads left">
         <button class="close-ads" onclick="closeAds('left')">X</button>
         <img src="img/publi/1.jpg">
@@ -43,7 +43,7 @@
         </div>
     </header>
 
-    <!-- Sección de Servicios -->
+    <!-- Sección de productos (salsas) -->
     <section class="services">
         <h2>Variedad de salsas</h2>
         <div class="services-cards">
@@ -136,6 +136,7 @@
             </tbody>
         </table>
     </section>
+    <!-- Pie de pagina -->
     <footer>
         <div class="footer-content">
             <div class="footer-section">
@@ -155,6 +156,7 @@
             </div>
             <div class="footer-section">
                 <h3>Síguenos</h3>
+                <!-- Iconos para redes sociales -->
                 <div class="social-icons">
                     <a href="#">
                         <svg id="Capa_1" enable-background="new 0 0 512 512" height="30" viewBox="0 0 512 512" width="30" xmlns="http://www.w3.org/2000/svg">
@@ -196,12 +198,12 @@
             <p>&copy; 2024 GERMAX. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <!-- Script para cerrar anuncios -->
     <script>
         function closeAds(position) {
             var adsContainer = document.querySelector('.ads.' + position);
             adsContainer.style.display = 'none';
         }
         </script>
-    <script src="scripts.js"></script>
 </body>
 </html>

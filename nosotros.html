@@ -6,10 +6,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
     <title>Sobre Nosotros</title>
     <link rel="stylesheet" href="css/styles2.css">
-</head>
-<body>
     <style>
-        /* Barra de navegar */
+
+
+        /* Barra de navegacion */
 nav {
     background-color: var(--morado);
     overflow: hidden;
@@ -64,91 +64,13 @@ nav ul li a:focus {
         margin: 10px 0;
     }
 }
-.carousel {
-    position: relative;
-    max-width: 80%;
-    margin: 20px auto;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    background: #fff;
-}
 
-.carousel-inner {
-    display: flex;
-    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.carousel-item {
-    min-width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
-}
-
-.carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-}
-
-.carousel input {
-    display: none;
-}
-
-.carousel input:checked + .carousel-inner .carousel-item {
-    display: block;
-    transform: translateX(0);
-}
-
-.carousel input:nth-child(1):checked ~ .carousel-inner {
-    transform: translateX(0%);
-}
-
-.carousel input:nth-child(2):checked ~ .carousel-inner {
-    transform: translateX(-100%);
-}
-
-.carousel input:nth-child(3):checked ~ .carousel-inner {
-    transform: translateX(-200%);
-}
-
-.carousel label {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.7);
-    color: #6a11cb;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 32px;
-    z-index: 1;
-    transition: background-color 0.3s;
-}
-
-.carousel label:hover {
-    background-color: rgba(255, 255, 255, 1);
-}
-
-.carousel .prev {
-    left: 15px;
-}
-
-.carousel .next {
-    right: 15px;
-}
-
+/*Estilos para los anuncios de publicidad*/
 .ads {
     position: fixed;
-    top: 100px; /* Ajustar para que los anuncios estén debajo del menú */
+    top: 100px; /* Anuncios debajo del menú tanto derecha e izquierda*/
     width: 100px;
     background-color: #fff;
-   
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -213,86 +135,15 @@ nav ul li a:focus {
 .content_h1 {
     text-align: center;
 }
-/* tablas */
-.tabla{
-    background-color: var(--azul);
-}
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
 
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-th, td {
-    padding: 10px;
-    text-align: left;
-}
 /* video */
 video {
     width: 100%;
     margin-top: 20px;
 }
  
-
-/* formulario*/
-.contact-form {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background: var(--background-color);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-.contact-form h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: var(--morado);
-}
-
-.contact-form .form-group {
-    margin-bottom: 15px;
-    
-}
-
-.contact-form .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    
-
-}
-
-.contact-form .form-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    
-}
-
-.contact-form .form-group button {
-    width: 100%;
-    padding: 10px;
-    background: var(--button-color);
-    color: var(--text-color);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.contact-form .form-group button:hover {
-    background: var(--button-hover-color);
-}
-  
-
-/* este crea el efecto parallax en el header*/
+/* Crea el efecto parallax en el header*/
 .parallax {
     background-image: url('/img/fondo/1.jpg'); /* Reemplazar con la URL de tu imagen */
     height: 850px;
@@ -332,93 +183,8 @@ video {
     border-radius: 10px;
 }
 
-/* productos y cards */
-.products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 20px;
-}
 
-.card {
-    background: var(--background-color);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    width: calc(33.333% - 20px);
-    display: flex;
-    flex-direction: column;
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-}
-
-.card-content {
-    padding: 20px;
-    flex-grow: 1;
-}
-
-.card-content h3 {
-    margin-top: 0;
-    color: var(--morado);
-}
-
-.card-content p {
-    flex-grow: 1;
-   
-}
-
-.card-content button {
-    background: var(--button-color);
-    color: var(--button-text-color);
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    width: 100%;
-}
-
-.card-content button:hover {
-    background: var(--button)
-}
-/* responsividad a cards */
-@media (max-width: 992px) {
-    .card {
-        width: calc(50% - 20px);
-    }
-}
-
-@media (max-width: 768px) {
-    .card {
-        width: 100%;
-    }
-}
-/* servicios */
-.services {
-    padding: 20px;
-    background: var(--background-color);
-    max-width: 1200px;
-    margin: 20px auto;
-    text-align: center;
-}
-
-.services h2 {
-    color: var(--morado);
-    margin-bottom: 20px;
-}
-
-.services-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-/* Footer */
+/* Estilos para el pie de pagina*/
 footer {
     background-color: var(--morado);
     color: var(--text-color);
@@ -490,100 +256,7 @@ footer {
     text-align: justify; 
 }
 
-
-
-/* tabla de precios */
-.pricing {
-    padding: 20px;
-    background: var(--background-color);
-    max-width: 800px;
-    margin: 20px auto;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.pricing h2 {
-    color: var(--morado);
-    margin-bottom: 20px;
-    font-size: 2rem;
-}
-
-.pricing table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 0 auto;
-}
-
-.pricing th, .pricing td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: left;
-    font-size: 1.6rem;
-}
-
-.pricing th {
-    background-color: var(--morado);
-    color: var(--text-color);
-    text-transform: uppercase;
-}
-
-.pricing td {
-    background-color: var(--background-color);
-    color: #333;
-}
-
-.pricing tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-.pricing tbody tr:hover {
-    background-color: #f1f1f1;
-    cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    .pricing table, .pricing tbody, .pricing th, .pricing td, .pricing tr {
-        display: block;
-    }
-
-    .pricing th {
-        background-color: var(--morado);
-        color: var(--text-color);
-        padding: 10px;
-        text-align: center;
-    }
-
-    .pricing td {
-        background-color: var(--background-color);
-        padding: 10px;
-        text-align: center;
-        border: none;
-        position: relative;
-    }
-
-    .pricing td:before {
-        content: attr(data-label);
-        position: absolute;
-        left: 0;
-        width: 50%;
-        padding: 10px;
-        background-color: #f1f1f1;
-        text-align: left;
-        font-weight: bold;
-    }
-
-    .pricing td:nth-of-type(2):before {
-        background-color: #f9f9f9;
-    }
-
-    .pricing td {
-        padding-left: 50%;
-    }
-}
-
-
-/* estilos de mision, vision, etc */
+/* Estilos para mision, vision, etc */
 .about-content {
     max-width: 1200px;
     margin: 40px auto;
@@ -640,6 +313,8 @@ footer {
     }
 }
     </style>
+</head>
+<body>
     <!-- Menú Principal -->
     <nav>
         <ul class="menu">
@@ -682,7 +357,7 @@ footer {
                 <p>Somos una empresa que vende salsas en el municipio de Tapachula, Chiapas, conocida como la Perla del Soconusco. Desde nuestros inicios, nos hemos dedicado a ofrecer las mejores salsas con ingredientes frescos y locales.</p>
             </div>
         </section>
-
+        <!---Seccion de Mision-->
         <section class="mission">
             <img src="img/publi/mision.jpg "alt="Nuestra Misión">
             <div class="text">
@@ -690,7 +365,7 @@ footer {
                 <p>Proporcionar salsas de alta calidad que realcen el sabor de los platillos de nuestros clientes, utilizando ingredientes naturales y procesos artesanales.</p>
             </div>
         </section>
-
+        <!---Seccion de Vision-->
         <section class="vision">
             <img src="img/publi/vision.jpg" alt="Nuestra Visión">
             <div class="text">
@@ -698,7 +373,7 @@ footer {
                 <p>Ser reconocidos como la mejor empresa de salsas en el país, conocida por nuestra innovación, calidad y compromiso con la comunidad y el medio ambiente.</p>
             </div>
         </section>
-
+        <!---Seccion de Proposito-->
         <section class="purpose">
             <img src="img/publi/prop.jpg" alt="Nuestro Propósito">
             <div class="text">
@@ -707,14 +382,14 @@ footer {
             </div>
         </section>
     </div>
+    <!--Video de publicidad-->
     <div class="content">
-       
         <h2>Publicidad</h2>
         <video controls>
             <source src="vid/video.mp4" type="video/mp4">
-            Tu navegador no soporta la reproducción de videos.
         </video>
     </div>
+    <!--Pie de pagina-->
     <footer>
         <div class="footer-content">
             <div class="footer-section">
@@ -734,6 +409,7 @@ footer {
             </div>
             <div class="footer-section">
                 <h3>Síguenos</h3>
+                <!-- Iconos para redes sociales -->
                 <div class="social-icons">
                     <a href="#">
                         <svg id="Capa_1" enable-background="new 0 0 512 512" height="30" viewBox="0 0 512 512" width="30" xmlns="http://www.w3.org/2000/svg">
@@ -775,6 +451,7 @@ footer {
             <p>&copy; 2024 GERMAX. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <!--Script para cerrar los anuncios de publicidad -->
     <script>
         function closeAds(position) {
             var adsContainer = document.querySelector('.ads.' + position);

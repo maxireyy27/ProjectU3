@@ -1,3 +1,4 @@
+/* Colores usados en las paginas */
 :root {
     --plata: #f4f4f4;
     --morado: #6a11cb;
@@ -9,7 +10,7 @@
     --button-text-color: white; /* Color del texto del botón */
     --button-hover-text-color: white; /* Color del texto del botón en hover */
 }
-
+/* Estilos para etiqueta body */
 body {
     font-family: Arial, sans-serif;
     font-size: 1.6rem;
@@ -246,60 +247,6 @@ video {
 }
  
 
-/* formulario*/
-.contact-form {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background: var(--background-color);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-.contact-form h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: var(--morado);
-}
-
-.contact-form .form-group {
-    margin-bottom: 15px;
-    
-}
-
-.contact-form .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    
-
-}
-
-.contact-form .form-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    
-}
-
-.contact-form .form-group button {
-    width: 100%;
-    padding: 10px;
-    background: var(--button-color);
-    color: var(--text-color);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.contact-form .form-group button:hover {
-    background: var(--button-hover-color);
-}
-  
-
 /* este crea el efecto parallax en el header*/
 .parallax {
     background-image: url('/img/fondo/1.jpg'); /* Reemplazar con la URL de tu imagen */
@@ -379,20 +326,6 @@ video {
    
 }
 
-.card-content button {
-    background: var(--button-color);
-    color: var(--button-text-color);
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    width: 100%;
-}
-
-.card-content button:hover {
-    background: var(--button)
-}
 /* responsividad a cards */
 @media (max-width: 992px) {
     .card {
@@ -587,63 +520,5 @@ footer {
 
     .pricing td {
         padding-left: 50%;
-    }
-}
-
-
-/* estilos de mision, vision, etc */
-.about-content {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-.about-content section {
-    display: flex;
-    align-items: center;
-    margin-bottom: 40px;
-    padding: 20px;
-    background-color: var(--background-color);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-.about-content section img {
-    width: 30%;
-    border-radius: 10px;
-    margin-right: 20px;
-}
-
-.about-content section .text {
-    flex: 1;
-}
-
-.about-content h2 {
-    color: var(--morado);
-    margin-bottom: 20px;
-    font-family: 'Staatliches', sans-serif;
-    font-size: 2.4rem;
-}
-
-.about-content p {
-    color: #333;
-    line-height: 1.6;
-    text-align: justify;
-}
-
-@media (max-width: 768px) {
-    .about-content {
-        padding: 0 10px;
-    }
-
-    .about-content section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-content section img {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 20px;
     }
 }
